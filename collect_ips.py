@@ -8,7 +8,7 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(
 
 # 目标URL列表
 urls = [
-     'https://ip.164746.xyz',
+    'https://ip.164746.xyz',
     'https://api.uouin.com/cloudflare.html',
     'https://ip.164746.xyz/ipTop.html',
     'https://ip.164746.xyz/ipTop10.html',
@@ -17,7 +17,7 @@ urls = [
     'https://addressesapi.090227.xyz/ip.164746.xyz',
     'https://ipdb.api.030101.xyz/?type=bestcf&country=true',
     'https://ipdb.030101.xyz/api/bestcf.txt'
-]    # 'https://cf.090227.xyz',
+]
 
 # 预编译正则表达式匹配IP地址
 ip_pattern = re.compile(r'\b(?:\d{1,3}\.){3}\d{1,3}\b')
@@ -57,8 +57,7 @@ def main():
     if ip_addresses:
         with open('ip.txt', 'w') as file:
             for ip in ip_addresses:
-                country = get_ip_country(ip)
-                file.write(f"{ip}#{country}\n")
+                file.write(f"{ip}\n")  # 只写入IP，不查询国家代码
         logging.info("IP地址已保存到 ip.txt 文件中。")
     else:
         logging.info("没有提取到任何IP地址。")
