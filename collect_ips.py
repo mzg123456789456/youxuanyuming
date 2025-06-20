@@ -22,23 +22,6 @@ urls = [
 # 预编译正则表达式匹配IP地址
 ip_pattern = re.compile(r'\b(?:\d{1,3}\.){3}\d{1,3}\b')
 
-# 获取IP的国家简称
-def get_ip_country(ip):
-    try:
-        response = requests.get(f"https://ipwhois.app/json/{ip}")
-        response.raise_for_status()
-        data = response.json()
-
-        # 检查返回数据并获取国家代码
-        if data.get('success', False):
-            return data.get('country_code', 'UNKNOWN').upper()
-        else:
-            logging.warning(f"IP {ip} 查询失败：{data.get('message', '未知错误')}")
-            return 'UNKNOWN'
-    except requests.exceptions.RequestException as e:
-        logging.error(f"获取 {ip} 国家信息失败: {e}")
-        return 'UNKNOWN'
-
 # 提取IP地址
 def extract_ips_from_url(url):
     try:
