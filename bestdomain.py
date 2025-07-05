@@ -62,7 +62,7 @@ if __name__ == "__main__":
     subdomain_ip_mapping = {
         'bestcf': 'https://raw.githubusercontent.com/mzg123456789456/youxuanyuming/refs/heads/main/proxyip.txt',  # #域名一，bestcf.域名.com
         'api': 'https://raw.githubusercontent.com/mzg123456789456/youxuanyuming/refs/heads/main/ip.txt', #域名二，api.域名.com
-        'sg': 'https://raw.githubusercontent.com/mzg123456789456/p57gdv3j3n0vg334/refs/heads/main/sip.txtt', #域名二，api.域名.com
+        'sg': 'https://raw.githubusercontent.com/mzg123456789456/p57gdv3j3n0vg334/refs/heads/main/sip.txt', #域名二，api.域名.com
         'kr': 'https://raw.githubusercontent.com/mzg123456789456/p57gdv3j3n0vg334/refs/heads/main/kip.txt', #域名二，api.域名.com
         'jp': 'https://raw.githubusercontent.com/mzg123456789456/p57gdv3j3n0vg334/refs/heads/main/jip.txt', #域名二，api.域名.com
         
